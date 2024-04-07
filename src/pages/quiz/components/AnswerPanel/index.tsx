@@ -1,7 +1,7 @@
-import { RevealResult } from './components/RevealResult';
-import { useQuizState } from '../../hooks/useQuizState';
-import { QandA } from './components/Q&A';
-import { Spinner } from '../../components/Spinner';
+import { RevealResult } from './RevealResult';
+import { useQuizState } from '../../../../hooks/useQuizState';
+import { QandA } from './Q&A';
+import { Spinner } from '../../../../components/Spinner';
 
 export const AnswerPanel = () => {
   const { isSubmitting, validate } = useQuizState((s) => s);

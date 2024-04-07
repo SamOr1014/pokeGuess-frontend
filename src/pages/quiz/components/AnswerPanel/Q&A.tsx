@@ -1,8 +1,8 @@
-import { useQuizState } from '../../../hooks/useQuizState';
+import { useQuizState } from '../../../../hooks/useQuizState';
 import { AnswerButtons } from './AnswerButtons';
 import { ArrowBigRightDash, AudioLines } from 'lucide-react';
-import { Button } from '../../../components/ui/button';
-import { createSoundObj } from '../../../utilities/createSoundObject';
+import { Button } from '../../../../components/ui/button';
+import { createSoundObj } from '../../../../utilities/createSoundObject';
 import { useCallback } from 'react';
 
 export const QandA = () => {
@@ -10,7 +10,6 @@ export const QandA = () => {
 
   const playPokemonCry = useCallback(() => {
     currentQuestion &&
-      !mute &&
       createSoundObj({ soundLink: currentQuestion.pokemonCry }).play();
   }, [currentQuestion, mute]);
 

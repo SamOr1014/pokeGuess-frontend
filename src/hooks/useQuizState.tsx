@@ -60,11 +60,17 @@ export const useQuizState = create<QuizState & QuizStateAction>((set, get) => ({
       updateQuizState,
       currentScore,
       currentQuestionCount,
+      mute,
       addQuestionCount,
     } = get();
 
     try {
-      updateQuizState({ ...initialState, currentScore, currentQuestionCount });
+      updateQuizState({
+        ...initialState,
+        currentScore,
+        currentQuestionCount,
+        mute,
+      });
       set({ isLoading: true });
       const { data } = await PokeGuessInstance.get<PokemonQuestion>('/random');
       addQuestionCount();

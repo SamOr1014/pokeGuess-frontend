@@ -1,6 +1,6 @@
 import { ArrowBigRight } from 'lucide-react';
-import { Button } from '../../../components/ui/button';
-import { useQuizState } from '../../../hooks/useQuizState';
+import { Button } from '../../../../components/ui/button';
+import { useQuizState } from '../../../../hooks/useQuizState';
 
 export const RevealResult = () => {
   const { validate, fetchQuestion } = useQuizState((state) => state);

@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import { ThemeSwitch } from './ThemeSwitch';
-import { Button } from './ui/button';
+import { ThemeSwitch } from '../../../components/ThemeSwitch';
+import { Button } from '../../../components/ui/button';
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
-} from './ui/navigation-menu';
+} from '../../../components/ui/navigation-menu';
 import pokeball from '/pokeball.svg';
 
 export const NavBar = () => {

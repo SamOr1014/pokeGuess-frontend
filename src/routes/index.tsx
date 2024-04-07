@@ -1,18 +1,18 @@
 import { createBrowserRouter } from 'react-router-dom';
-import App from '../App';
-import { Quiz } from '../pages/quiz/Quiz';
-import { StartQuiz } from '../pages/quiz/StartQuiz';
+import { Layout } from '../pages/layout';
+import { Quiz } from '../pages/quiz';
+import { FrontPage } from '../pages/front';
 import ErrorPage from '../pages/ErrorPage';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
-        element: <StartQuiz />,
+        element: <FrontPage />,
       },
       {
         path: '/quiz',

@@ -1,4 +1,4 @@
-import { useQuizState } from '../../../hooks/useQuizState';
+import { useQuizState } from '../../../../hooks/useQuizState';
 
 export const Score = () => {
   const { currentScore, currentQuestionCount } = useQuizState((s) => s);
