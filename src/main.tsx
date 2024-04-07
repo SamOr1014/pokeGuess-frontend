@@ -5,7 +5,7 @@ import { ThemeProvider } from './components/themeProvider.tsx';
 import { router } from './routes';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-    <ThemeProvider>
-        <RouterProvider router={router} />
-    </ThemeProvider>
+  <ThemeProvider>
+    <RouterProvider router={router} />
+  </ThemeProvider>
 );

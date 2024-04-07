@@ -5,17 +5,17 @@ import { ThemeProvider } from '../../components/themeProvider';
 import { act } from 'react-dom/test-utils';
 
 describe('useTheme hook', () => {
-    it('testing return theme and setTheme works properly', () => {
-        const { result } = renderHook(() => useTheme(), {
-            wrapper: ({ children }) => (
-                <ThemeProvider defaultTheme="dark">{children}</ThemeProvider>
-            ),
-        });
-
-        expect(result.current.theme).toEqual('dark');
-
-        act(() => result.current.setTheme('light'));
-
-        expect(result.current.theme).toEqual('light');
+  it('testing return theme and setTheme works properly', () => {
+    const { result } = renderHook(() => useTheme(), {
+      wrapper: ({ children }) => (
+        <ThemeProvider defaultTheme="dark">{children}</ThemeProvider>
+      ),
     });
+
+    expect(result.current.theme).toEqual('dark');
+
+    act(() => result.current.setTheme('light'));
+
+    expect(result.current.theme).toEqual('light');
+  });
 });
