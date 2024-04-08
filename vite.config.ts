@@ -14,8 +14,14 @@ export default defineConfig({
     setupFiles: ['src/setupTest.ts'],
     coverage: {
       enabled: true,
+      exclude: [
+        '**.config.**',
+        '.**.**',
+        'src/routes/*',
+        'src/components/ui/*',
+      ],
     },
-    exclude: [...configDefaults.exclude, './src/routes/**', './**/.config/**'],
+    exclude: [...configDefaults.exclude],
   },
   resolve: {
     alias: {

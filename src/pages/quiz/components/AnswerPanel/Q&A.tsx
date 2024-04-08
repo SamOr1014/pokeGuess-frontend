@@ -15,7 +15,7 @@ export const QandA = () => {
 
   return (
     <>
-      <h3 className="text-center scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+      <h3 className="text-center scroll-m-20 lg:text-4xl text-base font-extrabold tracking-tight lg:text-5xl">
         Who is that pokemon?
       </h3>
       <div className="flex text-xl justify-center items-center">
