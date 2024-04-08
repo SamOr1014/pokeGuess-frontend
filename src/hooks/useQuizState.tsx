@@ -3,7 +3,6 @@ import { PokeGuessInstance } from '../utilities/axiosInstance';
 
 export type PokemonQuestion = {
   pokemonId: number;
-  pokemonName: string;
   pokemonCry: string;
   pokemonImg: string;
   pokemonNameList: string[];
@@ -72,7 +71,8 @@ export const useQuizState = create<QuizState & QuizStateAction>((set, get) => ({
         mute,
       });
       set({ isLoading: true });
-      const { data } = await PokeGuessInstance.get<PokemonQuestion>('/random');
+      const { data } =
+        await PokeGuessInstance.get<PokemonQuestion>('/question');
       addQuestionCount();
       set({ isLoading: false, currentQuestion: data });
     } catch (e) {

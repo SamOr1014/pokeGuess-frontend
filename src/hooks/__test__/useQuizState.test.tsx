@@ -5,7 +5,6 @@ import { initialState, PokemonQuestion, useQuizState } from '../useQuizState';
 describe('useQuizState', () => {
   const mockData: PokemonQuestion = {
     pokemonId: 1,
-    pokemonName: 'a',
     pokemonCry: 'cry url',
     pokemonImg: 'url',
     pokemonNameList: ['a', 'b', 'c', 'd'],

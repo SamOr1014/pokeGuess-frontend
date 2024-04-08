@@ -20,7 +20,6 @@ describe('Front Page', () => {
           pokemonId: 1,
           pokemonCry: 'cry url',
           pokemonImg: 'url',
-          pokemonName: 'a',
           pokemonNameList: ['a', 'a', 'a', 'a'],
         },
       })
