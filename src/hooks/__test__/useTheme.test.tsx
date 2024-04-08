@@ -1,8 +1,7 @@
-import { renderHook } from '@testing-library/react';
+import { act, renderHook } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { useTheme } from '../useTheme';
 import { ThemeProvider } from '../../components/themeProvider';
-import { act } from 'react-dom/test-utils';
 
 describe('useTheme hook', () => {
   it('testing return theme and setTheme works properly', () => {

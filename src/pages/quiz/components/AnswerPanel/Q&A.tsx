@@ -21,7 +21,12 @@ export const QandA = () => {
       <div className="flex text-xl justify-center items-center">
         <span>Checkout its sound</span>
         <ArrowBigRightDash />
-        <Button className="p-2" variant={'ghost'} onClick={playPokemonCry}>
+        <Button
+          data-testid={'pokemon-audio'}
+          className="p-2"
+          variant={'ghost'}
+          onClick={playPokemonCry}
+        >
           <AudioLines />
         </Button>
       </div>

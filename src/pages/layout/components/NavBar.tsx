@@ -11,13 +11,13 @@ import pokeball from '/pokeball.svg';
 export const NavBar = () => {
   return (
     <>
-      <div className="flex flex-1 gap-1 p-3 text-xl">
+      <div data-testid={'logo'} className="flex flex-1 gap-1 p-3 text-xl">
         <img src={pokeball} className="w-[30px] h-[30px]" />
         <span className="font-pixel cursor-default select-none">
           PokeGuesser
         </span>
       </div>
-      <NavigationMenu className="flex gap-5 w-full">
+      <NavigationMenu data-testid={'nav-menu'} className="flex gap-5 w-full">
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link to="/">

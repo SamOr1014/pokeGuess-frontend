@@ -7,6 +7,7 @@ type Props = {
 export const Spinner = ({ className }: Props) => {
   return (
     <svg
+      data-testid={'spinner'}
       className={cn('animate-spin mr-3 h-5 w-5 text-white', className ?? '')}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -18,7 +19,7 @@ export const Spinner = ({ className }: Props) => {
         cy="12"
         r="10"
         stroke="currentColor"
-        stroke-width="4"
+        strokeWidth="4"
       ></circle>
       <path
         className="opacity-75"

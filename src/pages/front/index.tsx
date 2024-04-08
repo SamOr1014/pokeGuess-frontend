@@ -10,7 +10,11 @@ export const FrontPage = () => {
 
   return (
     <div className="p-10 flex-1 flex flex-col justify-center items-center gap-5">
-      <img src={PIKACHU_GIF_URL} alt="Pikachu Dancing" />
+      <img
+        data-testid="pikachu-dance"
+        src={PIKACHU_GIF_URL}
+        alt="Pikachu Dancing"
+      />
       <p className="w-1/2 text-center text-2xl font-semibold tracking-tight lg:text-5xl bg-gradient-to-br from-red-600 via-zinc-700 to-zinc-100 text-transparent bg-clip-text">
         Are You Ready for the challenge, Pokemon Trainer
       </p>
@@ -19,7 +23,7 @@ export const FrontPage = () => {
         <span className="text-xl">Press Here to accept Challenge!</span>
         <MoveDown />
       </div>
-      <Link to={'/quiz'}>
+      <Link data-testid={'nav-to-quiz'} to={'/quiz'}>
         <Button variant={'destructive'} onClick={fetchQuestion}>
           Start
         </Button>

@@ -15,7 +15,7 @@ export const AnswerPanel = () => {
   }
 
   return (
-    <div className="flex flex-col gap-5 ">
+    <div data-testid={'answer-panel'} className="flex flex-col gap-5 ">
       {validate ? <RevealResult /> : <QandA />}
     </div>
   );

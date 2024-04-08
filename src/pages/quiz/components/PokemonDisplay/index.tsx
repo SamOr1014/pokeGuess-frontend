@@ -8,10 +8,11 @@ const BG_URL =
 export const PokemonDisplay = () => {
   const { currentQuestion, validate } = useQuizState((s) => s);
   return (
-    <div className="relative">
-      <img src={BG_URL} />
+    <div data-testid={'guess-pokemon-display'} className="relative">
+      <img data-testid={'guess-pokemon-bg'} src={BG_URL} />
       {currentQuestion?.pokemonImg ? (
         <img
+          data-testid={'guess-pokemon-image'}
           src={currentQuestion?.pokemonImg}
           className={cn(
             'w-[45%] absolute top-[10%] left-[7%] brightness-0',

@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { PokeGuessInstance } from '../utilities/axiosInstance';
 
-type PokemonQuestion = {
+export type PokemonQuestion = {
   pokemonId: number;
   pokemonName: string;
   pokemonCry: string;
@@ -9,18 +9,18 @@ type PokemonQuestion = {
   pokemonNameList: string[];
 };
 
-type ValidatedAnswer = {
+export type ValidatedAnswer = {
   correct: boolean;
   image: string;
   pokemonName: string;
 };
 
-type Answer = {
+export type Answer = {
   pokemonId: number;
   answer: string;
 };
 
-type QuizState = {
+export type QuizState = {
   isLoading: boolean;
   isError: boolean;
   currentQuestion?: PokemonQuestion;
@@ -31,7 +31,7 @@ type QuizState = {
   mute: boolean;
 };
 
-const initialState: QuizState = {
+export const initialState: QuizState = {
   isLoading: false,
   isError: false,
   currentQuestion: undefined,
@@ -42,7 +42,7 @@ const initialState: QuizState = {
   mute: false,
 };
 
-type QuizStateAction = {
+export type QuizStateAction = {
   updateQuizState: (state: Partial<QuizState>) => void;
   fetchQuestion: () => void;
   validateAnswer: (answer: string) => void;

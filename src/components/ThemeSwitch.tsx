@@ -6,12 +6,13 @@ export const ThemeSwitch = () => {
   const { theme, setTheme } = useTheme();
   return (
     <div className="flex gap-3">
-      <Sun />
+      <Sun data-testid={'sunIcon'} />
       <Switch
+        data-testid={'themeModeSwitch'}
         checked={theme === 'dark'}
         onCheckedChange={(val) => setTheme(val ? 'dark' : 'light')}
       />
-      <MoonStar />
+      <MoonStar data-testid={'moonStarIcon'} />
     </div>
   );
 };

@@ -17,7 +17,10 @@ export const Quiz = () => {
   }, []);
 
   return (
-    <div className="flex-1 flex flex-col gap-12 w-full p-6">
+    <div
+      data-testid={'quiz-container'}
+      className="flex-1 flex flex-col gap-12 w-full p-6"
+    >
       <QuizToolbar />
       <PokemonDisplay />
       <AnswerPanel />

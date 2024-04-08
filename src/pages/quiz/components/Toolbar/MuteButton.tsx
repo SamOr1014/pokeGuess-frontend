@@ -5,7 +5,7 @@ import { useQuizState } from '../../../../hooks/useQuizState';
 export const MuteButton = () => {
   const { mute, toggleMute } = useQuizState((s) => s);
   return (
-    <Button variant={'ghost'} onClick={toggleMute}>
+    <Button data-testid={'mute button'} variant={'ghost'} onClick={toggleMute}>
       {!mute ? (
         <div className="flex gap-2 text-xl justify-center items-center">
           <span>mute</span>

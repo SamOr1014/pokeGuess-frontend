@@ -20,7 +20,12 @@ export const RevealResult = () => {
         </>
       )}
       <div className="grid place-items-center">
-        <Button className="text-2xl p-5" size={'lg'} onClick={fetchQuestion}>
+        <Button
+          data-testid={'next-question-button'}
+          className="text-2xl p-5"
+          size={'lg'}
+          onClick={fetchQuestion}
+        >
           Next
           <ArrowBigRight />
         </Button>
