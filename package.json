@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "compose": "docker compose --env-file ./.env up --build -d"
   },
   "dependencies": {
     "@radix-ui/react-navigation-menu": "^1.1.4",
