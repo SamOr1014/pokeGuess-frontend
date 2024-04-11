@@ -26,15 +26,10 @@ export const NavBar = () => {
           <NavigationMenuItem>
             <Link to="/">
               <Button variant="link" className="font-light">
-                Quiz
+                Home
               </Button>
             </Link>
           </NavigationMenuItem>
-          {/* <NavigationMenuItem>
-                        <Button variant="link" className="text-lg font-light">
-                            Learn
-                        </Button>
-                    </NavigationMenuItem> */}
         </NavigationMenuList>
         <ThemeSwitch />
       </NavigationMenu>

@@ -24,6 +24,7 @@ export default defineConfig({
         '.**.**',
         'src/routes/*',
         'src/components/ui/*',
+        'src/main.tsx',
       ],
     },
     exclude: [...configDefaults.exclude],
