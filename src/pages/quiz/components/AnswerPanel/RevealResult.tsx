@@ -6,7 +6,7 @@ export const RevealResult = () => {
   const { validate, fetchQuestion } = useQuizState((state) => state);
 
   return (
-    <>
+    <div className="flex flex-col gap-12">
       {validate?.correct ? (
         <h3 className="text-center scroll-m-20 lg:text-4xl text-xl font-extrabold tracking-tight lg:text-5xl">
           Correct! Well Done!
@@ -16,7 +16,7 @@ export const RevealResult = () => {
           <h3 className="text-center lg:text-2xl lg-base font-extrabold tracking-tight">
             Sorry! The Correct Answer is:
           </h3>
-          <span className="text-center lg:text-4xl text-xl">
+          <span className="text-center lg:text-5xl text-3xl">
             {validate?.pokemonName}
           </span>
         </>
@@ -32,6 +32,6 @@ export const RevealResult = () => {
           <ArrowBigRight />
         </Button>
       </div>
-    </>
+    </div>
   );
 };

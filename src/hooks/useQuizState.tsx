@@ -84,7 +84,7 @@ export const useQuizState = create<QuizState & QuizStateAction>((set, get) => ({
       set({ isSubmitting: true });
       const pokemonId = get().currentQuestion?.pokemonId;
 
-      if (!pokemonId) throw new Error('No Pokemon ID');
+      if (!pokemonId) throw new Error('Invalid Pokemon ID');
 
       const body: Answer = {
         answer,

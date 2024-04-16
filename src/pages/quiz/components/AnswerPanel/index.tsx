@@ -2,6 +2,7 @@ import { RevealResult } from './RevealResult';
 import { useQuizState } from '../../../../hooks/useQuizState';
 import { QandA } from './Q&A';
 import { Spinner } from '../../../../components/Spinner';
+import { cn } from '../../../../lib/utils';
 
 export const AnswerPanel = () => {
   const { isSubmitting, validate } = useQuizState((s) => s);
@@ -15,7 +16,13 @@ export const AnswerPanel = () => {
   }
 
   return (
-    <div data-testid={'answer-panel'} className="flex flex-col gap-5 ">
+    <div
+      data-testid={'answer-panel'}
+      className={cn(
+        'flex flex-col flex-1 gap-5',
+        validate && 'justify-center items-center'
+      )}
+    >
       {validate ? <RevealResult /> : <QandA />}
     </div>
   );

@@ -10,7 +10,7 @@ import pokeball from '/pokeball.svg';
 
 export const NavBar = () => {
   return (
-    <div className="flex items-center justify-between w-full h-[55px] md:text-2xl text-base sticky top-0 z-10 bg-[var(--background)]">
+    <div className="flex items-center justify-between w-full h-[55px] md:text-2xl text-base sticky top-0 z-10 bg-[hsl(var(--background))]">
       <div
         data-testid={'logo'}
         className="flex flex-1 gap-1 p-3 justify-start items-center"

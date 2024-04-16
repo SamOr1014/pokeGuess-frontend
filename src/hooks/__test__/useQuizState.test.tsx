@@ -42,7 +42,6 @@ describe('useQuizState', () => {
   it('fetchQuestion', async () => {
     const { result } = renderHook(() => useQuizState((state) => state));
     await act(async () => result.current.fetchQuestion());
-    console.log('current', result.current);
     expect(result.current.currentQuestion).toBeDefined();
   });
   it('validateAnswer', async () => {
