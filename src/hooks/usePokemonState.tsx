@@ -18,7 +18,7 @@ export type PokemonState = {
   pokemon?: Pokemon;
 };
 
-const initialState: PokemonState = {
+export const initialState: PokemonState = {
   isLoading: false,
   isError: false,
 };

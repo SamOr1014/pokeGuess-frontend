@@ -19,7 +19,7 @@ export const AnswerPanel = () => {
     <div
       data-testid={'answer-panel'}
       className={cn(
-        'flex flex-col flex-1 gap-5',
+        'flex flex-col flex-1 gap-10',
         validate && 'justify-center items-center'
       )}
     >
