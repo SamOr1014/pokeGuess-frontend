@@ -21,6 +21,7 @@ export type PokemonState = {
 export const initialState: PokemonState = {
   isLoading: false,
   isError: false,
+  pokemon: undefined,
 };
 
 export type PokemonStateAction = {
