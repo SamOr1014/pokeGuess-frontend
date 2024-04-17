@@ -43,7 +43,7 @@ export const generateCardBackgroundColour = (type: PokemonTypes) => {
     case 'water':
       return 'bg-[#6390f0]';
     default:
-      return 'bg-white';
+      return 'bg-black';
   }
 };
 

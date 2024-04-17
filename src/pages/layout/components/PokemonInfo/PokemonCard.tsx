@@ -19,9 +19,31 @@ const InfoField = ({
   fieldChildren: React.ReactNode;
 }) => {
   return (
-    <div className="flex gap-2">
+    <div data-testid={'pokemon-card-info-field'} className="flex gap-2">
       <div>{fieldName}: </div>
       {fieldChildren}
+    </div>
+  );
+};
+
+const LoadSpinner = () => {
+  return (
+    <div className="w-full h-full flex flex-col justify-center items-center">
+      <Spinner className="w-[45%] h-[45%]" />
+      <span className="text-xl">loading...</span>
+    </div>
+  );
+};
+
+const CardError = ({ retryFn }: { retryFn: () => void }) => {
+  return (
+    <div className="w-full h-full flex flex-col justify-center items-center gap-2">
+      <ShieldAlert className="w-[45%] h-[45%]" />
+      <div className="text-xl">Error Occurred...</div>
+      <Button>
+        Retry
+        <RefreshCcw onClick={retryFn} />
+      </Button>
     </div>
   );
 };
@@ -48,21 +70,12 @@ export const PokemonCard = () => {
           ? 'bg-[hsl(var(--background))]'
           : pokemon && `${generateCardBackgroundColour(pokemon.type[0])}`
       )}
+      data-testid={'pokemon-card-popover-content'}
     >
       {isError ? (
-        <div className="w-full h-full flex flex-col justify-center items-center gap-2">
-          <ShieldAlert className="w-[45%] h-[45%]" />
-          <div className="text-xl">Error Occurred...</div>
-          <Button>
-            Retry
-            <RefreshCcw onClick={fetchPokemon} />
-          </Button>
-        </div>
+        <CardError retryFn={fetchPokemon} />
       ) : !pokemon || isLoading ? (
-        <div className="w-full h-full flex flex-col justify-center items-center">
-          <Spinner className="w-[45%] h-[45%]" />
-          <span className="text-xl">loading...</span>
-        </div>
+        <LoadSpinner />
       ) : (
         <div className="flex flex-col gap-2">
           <div className="flex gap-2">

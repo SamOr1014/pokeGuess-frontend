@@ -14,7 +14,10 @@ export const PokemonInfo = () => {
         open ? fetchPokemon() : reset();
       }}
     >
-      <PopoverTrigger className="flex justify-center items-center rounded-full w-20 animate-wiggle absolute bottom-2 right-2 p-3">
+      <PopoverTrigger
+        data-testid={'pokemon-card-popover-trigger'}
+        className="flex justify-center items-center rounded-full w-20 animate-wiggle absolute bottom-2 right-2 p-3"
+      >
         <Pokedex />
       </PopoverTrigger>
       <PokemonCard />
