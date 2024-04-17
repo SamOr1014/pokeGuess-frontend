@@ -26,42 +26,48 @@ add `--coverage` flag if you wanna check coverage and add `--ui` for using the v
 
 #### Current Coverage
 
-| File                                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s    |
-| ------------------------------------ | ------- | -------- | ------- | ------- | -------------------- |
-| All files                            | 96.68   | 83.07    | 96.66   | 96.68   |
-| components                           | 92.98   | 80       | 83.33   | 92.98   |
+| File                                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               |
+| ------------------------------------ | ------- | -------- | ------- | ------- | ------------------------------- |
+| All files                            | 95.71   | 61.11    | 88.09   | 95.71   |
+| components                           | 99.45   | 81.81    | 85.71   | 99.45   |
+| Pokedex.tsx                          | 100     | 100      | 100     | 100     |
 | Spinner.tsx                          | 100     | 100      | 100     | 100     |
-| ThemeSwitch.tsx                      | 100     | 66.66    | 100     | 100     | 13                   |
-| themeProvider.tsx                    | 87.69   | 80       | 66.66   | 87.69   | 40-47                |
-| hooks                                | 95.16   | 76.47    | 100     | 95.16   |
-| useQuizState.tsx                     | 94.82   | 75       | 100     | 94.82   | 79-80,99-100,103-104 |
+| ThemeSwitch.tsx                      | 100     | 66.66    | 100     | 100     | 13                              |
+| themeProvider.tsx                    | 87.69   | 80       | 66.66   | 87.69   | 40-47                           |
+| hooks                                | 94.08   | 75       | 90      | 94.08   |
+| usePokemonState.tsx                  | 91.11   | 66.66    | 50      | 91.11   | 38-41                           |
+| useQuizState.tsx                     | 94.82   | 75       | 100     | 94.82   | 79-80,99-100,103-104            |
 | useTheme.tsx                         | 100     | 100      | 100     | 100     |
 | lib                                  | 100     | 100      | 100     | 100     |
 | utils.ts                             | 100     | 100      | 100     | 100     |
 | pages                                | 92.59   | 50       | 100     | 92.59   |
-| ErrorPage.tsx                        | 92.59   | 50       | 100     | 92.59   | 17-18                |
+| ErrorPage.tsx                        | 92.59   | 50       | 100     | 92.59   | 17-18                           |
 | pages/front                          | 100     | 100      | 100     | 100     |
 | index.tsx                            | 100     | 100      | 100     | 100     |
 | pages/layout                         | 100     | 100      | 100     | 100     |
 | index.tsx                            | 100     | 100      | 100     | 100     |
 | pages/layout/components              | 100     | 100      | 100     | 100     |
 | NavBar.tsx                           | 100     | 100      | 100     | 100     |
+| pages/layout/components/PokemonInfo  | 76.16   | 69.23    | 57.14   | 76.16   |
+| PokemonCard.tsx                      | 71.91   | 66.66    | 40      | 71.91   | 15-27,39-49,56-60,76,109-119    |
+| index.tsx                            | 100     | 75       | 100     | 100     | 14                              |
 | pages/quiz                           | 100     | 100      | 100     | 100     |
 | index.tsx                            | 100     | 100      | 100     | 100     |
-| pages/quiz/components/AnswerPanel    | 96.07   | 86.66    | 100     | 96.07   |
-| AnswerButtons.tsx                    | 93.1    | 71.42    | 100     | 93.1    | 27-30                |
-| Q&A.tsx                              | 94.44   | 100      | 100     | 94.44   | 12-13                |
+| pages/quiz/components/AnswerPanel    | 96.25   | 87.5     | 100     | 96.25   |
+| AnswerButtons.tsx                    | 93.1    | 71.42    | 100     | 93.1    | 27-30                           |
+| Q&A.tsx                              | 94.44   | 100      | 100     | 94.44   | 12-13                           |
 | RevealResult.tsx                     | 100     | 100      | 100     | 100     |
 | index.tsx                            | 100     | 100      | 100     | 100     |
 | pages/quiz/components/PokemonDisplay | 100     | 80       | 100     | 100     |
-| index.tsx                            | 100     | 80       | 100     | 100     | 20                   |
+| index.tsx                            | 100     | 80       | 100     | 100     | 20                              |
 | pages/quiz/components/Toolbar        | 100     | 100      | 100     | 100     |
 | MuteButton.tsx                       | 100     | 100      | 100     | 100     |
 | Score.tsx                            | 100     | 100      | 100     | 100     |
 | index.tsx                            | 100     | 100      | 100     | 100     |
-| utilities                            | 100     | 50       | 100     | 100     |
+| utilities                            | 70      | 24.44    | 100     | 70      |
+| PokemonTypeHelper.ts                 | 64.51   | 23.25    | 100     | 64.51   | ...7,69,71,73,77,79,81,85,87,89 |
 | axiosInstance.ts                     | 100     | 100      | 100     | 100     |
-| createSoundObject.ts                 | 100     | 50       | 100     | 100     | 9                    |
+| createSoundObject.ts                 | 100     | 50       | 100     | 100     | 9                               |
 
 ### Run on Docker (Dockerised production build)
 
