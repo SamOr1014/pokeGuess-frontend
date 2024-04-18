@@ -7,8 +7,10 @@ import {
   NavigationMenuList,
 } from '../../../components/ui/navigation-menu';
 import pokeball from '/pokeball.svg';
+import { useQuizState } from '../../../hooks/useQuizState';
 
 export const NavBar = () => {
+  const reset = useQuizState((s) => s.resetState);
   return (
     <div className="flex items-center justify-between w-full h-[55px] md:text-2xl text-base sticky top-0 z-10 bg-[hsl(var(--background))]">
       <div
@@ -25,7 +27,7 @@ export const NavBar = () => {
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link to="/">
-              <Button variant="link" className="font-light">
+              <Button variant="link" className="font-light" onClick={reset}>
                 Home
               </Button>
             </Link>
